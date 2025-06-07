@@ -10,6 +10,7 @@ public class filmeModel {
     private float duracao;
     private String diretor;
     private String classificacao;
+    private boolean disponivel;
     @Id
     private String id; 
 
@@ -61,7 +62,13 @@ public class filmeModel {
         this.diretor = diretor;
     }
 
-    
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
 
     @Override
     public String toString() {
@@ -70,10 +77,7 @@ public class filmeModel {
                 ", diretor='" + diretor + '\'' +
                 ", duracao=" + duracao +
                 ", genero='" + genero + '\'' +
+                ", disponivel=" + disponivel +
                 '}';
     }
-
-
-
-    
 }

@@ -32,6 +32,8 @@ public class filmeController {
         filme.setDiretor(dto.getDiretor());
         filme.setDuracao(dto.getDuracao());
         filme.setGenero(dto.getGenero());
+        filme.setClassificacao(dto.getClassificacao());
+        filme.setDisponivel(dto.isDisponivel());
         return filme;
     }
     
@@ -117,6 +119,20 @@ public class filmeController {
             return new ResponseEntity<>(filmes, HttpStatus.OK);
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao listar os filmes.");
+        }
+    }
+
+    @GetMapping("/disponiveis")
+    public ResponseEntity<?> listarDisponiveis() {
+        try {
+            List<filmeModel> filmes = service.listarDisponiveis();
+            if(filmes.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+            return new ResponseEntity<>(filmes, HttpStatus.OK);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Erro ao listar os filmes disponíveis.");
         }
     }
 }

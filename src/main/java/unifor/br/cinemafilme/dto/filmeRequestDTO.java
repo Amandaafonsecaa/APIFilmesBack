@@ -17,6 +17,15 @@ public class filmeRequestDTO {
     @NotBlank(message = "Classificação é obrigatória")
     private String classificacao;
 
+    private boolean disponivel = true;
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
 
     public String getClassificacao() {
         return classificacao;
