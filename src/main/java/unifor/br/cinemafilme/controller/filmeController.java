@@ -34,6 +34,7 @@ public class filmeController {
         filme.setGenero(dto.getGenero());
         filme.setClassificacao(dto.getClassificacao());
         filme.setDisponivel(dto.isDisponivel());
+        filme.setPosterUrl(dto.getPosterUrl());
         return filme;
     }
     

@@ -11,6 +11,7 @@ public class filmeModel {
     private String diretor;
     private String classificacao;
     private boolean disponivel;
+    private String posterUrl;
     @Id
     private String id; 
 
@@ -70,6 +71,14 @@ public class filmeModel {
         this.disponivel = disponivel;
     }
 
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
+    }
+
     @Override
     public String toString() {
         return "FilmeModel{" +
@@ -78,6 +87,7 @@ public class filmeModel {
                 ", duracao=" + duracao +
                 ", genero='" + genero + '\'' +
                 ", disponivel=" + disponivel +
+                ", posterUrl='" + posterUrl + '\'' +
                 '}';
     }
 }

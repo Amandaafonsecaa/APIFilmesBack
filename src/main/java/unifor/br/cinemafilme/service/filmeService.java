@@ -50,6 +50,7 @@ public class filmeService {
             filmeEditar.setClassificacao(filme.getClassificacao());
             filmeEditar.setDiretor(filme.getDiretor());
             filmeEditar.setDisponivel(filme.isDisponivel());
+            filmeEditar.setPosterUrl(filme.getPosterUrl());
 
             return repository.save(filmeEditar);
         }
