@@ -19,6 +19,16 @@ public class filmeRequestDTO {
 
     private boolean disponivel = true;
 
+    private String posterUrl;
+
+    public String getPosterUrl(){
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String url){
+        this.posterUrl = url;
+    }
+
     public boolean isDisponivel() {
         return disponivel;
     }
